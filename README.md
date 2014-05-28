@@ -34,5 +34,10 @@ or simply drop **UIView+AutoLayoutView [.h|.m]** into your project, and referenc
 }
 ```
 
+### Usage
+``` obj-c
+MyView *myView = [MyView autoLayoutNew]; // Creates a new progrmmatic-AutoLayout ready object
+```
+
 ### Created and Maintained by
 [Arthur Ariel Sabintsev](http://www.sabintsev.com/) 
