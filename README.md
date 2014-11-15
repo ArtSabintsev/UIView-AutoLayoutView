@@ -45,8 +45,16 @@ or simply drop **UIView+AutoLayoutView [.h|.m]** into your project, and referenc
 
 ### Usage
 ``` obj-c
+
+// Create an AutoLaoyut view
 MyView *myView = [MyView autoLayoutNew]; // Creates a new progrmmatic-AutoLayout ready object
+
+// Update the view after the constraints are set
+[UIView updateLayoutForView:myView];
 ```
+
+### Created and Maintained by
+[Arthur Ariel Sabintsev](http://www.sabintsev.com/) 
 
 ### Created and Maintained by
 [Arthur Ariel Sabintsev](http://www.sabintsev.com/) 
