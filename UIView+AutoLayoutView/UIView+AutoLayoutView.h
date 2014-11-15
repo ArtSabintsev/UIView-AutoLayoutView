@@ -11,5 +11,6 @@
 @interface UIView (AutoLayoutView)
 
 + (instancetype)newAutoLayoutView;
++ (void)updateLayoutForView:(UIView *)view;
 
 @end

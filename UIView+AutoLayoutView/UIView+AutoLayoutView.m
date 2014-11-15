@@ -12,10 +12,16 @@
 
 + (instancetype)newAutoLayoutView
 {
-    UIView *view = [[self alloc] init];
+    UIView *view = [self new];
     [view setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     return view;
+}
+
++ (void)updateLayoutForView:(UIView *)view
+{
+    [view setNeedsLayout];
+    [view layoutIfNeeded];
 }
 
 @end

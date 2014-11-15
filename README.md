@@ -3,8 +3,8 @@
 ### About
 A small Objective-C category on `UIView` that creates a UIView object that is ready to be used in programmatic AutoLayout. This class is useful for those of us who do a lot of our AutoLayout definitions outside of xibs and storyboards.
 
-### Changelog (v1.0.0)
-- Initial commit
+### Changelog (v1.0.1)
+- Added `updateLayoutForView` method, which should be called after setting up NSLayoutConstraints on views that are needed farther down the lines as dependencies for other views.
 
 ### Installation Instructions
 ```
@@ -19,6 +19,7 @@ or simply drop **UIView+AutoLayoutView [.h|.m]** into your project, and referenc
 @interface UIView (AutoLayoutView)
 
 + (instancetype)newAutoLayoutView;
++ (void)updateLayoutForView:(UIView *)view;
 
 @end
 ```
@@ -27,11 +28,19 @@ or simply drop **UIView+AutoLayoutView [.h|.m]** into your project, and referenc
 ``` obj-c
 + (instancetype)newAutoLayoutView
 {
-    UIView *view = [[self alloc] init];
+    UIView *view = [self new];
     [view setTranslatesAutoresizingMaskIntoConstraints:NO];
     
     return view;
 }
+
++ (void)updateLayoutForView:(UIView *)view
+{
+    [view setNeedsLayout];
+    [view layoutIfNeeded];
+}
+
+@end
 ```
 
 ### Created and Maintained by
