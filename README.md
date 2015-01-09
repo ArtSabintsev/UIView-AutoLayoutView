@@ -7,11 +7,13 @@ A small Objective-C category on `UIView` that creates a UIView object that is re
 - Added `updateLayoutForView` method, which should be called after setting up NSLayoutConstraints on views that are needed farther down the lines as dependencies for other views.
 
 ### Installation Instructions
+
+### CocoaPods
 ```
 pod 'UIView-AutoLayoutView'
 ```
-
-or simply drop **UIView+AutoLayoutView [.h|.m]** into your project, and reference `UIView+AutoLayoutView.h` in the classes that need access to the information it provides.
+### Manual
+Simply drop the **UIView+AutoLayoutView** folder into your project, and reference `UIView+AutoLayoutView.h` in the classes that need access to the information it provides.
 
 ### The Interface
 
