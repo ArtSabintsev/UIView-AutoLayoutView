@@ -3,8 +3,9 @@
 ### About
 A small Objective-C category on `UIView` that creates a UIView object that is ready to be used in programmatic AutoLayout. This class is useful for those of us who do a lot of our AutoLayout definitions outside of xibs and storyboards.
 
-### Changelog (v1.0.1)
-- Added `updateLayoutForView` method, which should be called after setting up NSLayoutConstraints on views that are needed farther down the lines as dependencies for other views.
+### Changelog (v1.0.2)
+- Explicitly imported UIKit
+- Added Swift documentation to README
 
 ### Installation Instructions
 ```
@@ -43,14 +44,26 @@ or simply drop **UIView+AutoLayoutView [.h|.m]** into your project, and referenc
 @end
 ```
 
-### Usage
-``` obj-c
+### Usage 
+
+#### Objective-C
+```objc
 
 // Create an AutoLaoyut view
 MyView *myView = [MyView autoLayoutNew]; // Creates a new progrmmatic-AutoLayout ready object
 
 // Update the view after the constraints are set
 [UIView updateLayoutForView:myView];
+```
+
+#### Swift
+```swift
+
+// Create an AutoLaoyut view
+let myView = MyView.autoLayoutNew() // Creates a new progrmmatic-AutoLayout ready object
+
+// Update the view after the constraints are set
+UIView.updateLayoutForView(myView);
 ```
 
 ### Created and Maintained by
