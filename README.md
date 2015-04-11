@@ -51,7 +51,7 @@ Simply drop the **UIView+AutoLayoutView** folder into your project, and referenc
 #### Objective-C
 ```objc
 
-// Create an AutoLaoyut view
+// Create an AutoLayout view
 MyView *myView = [MyView autoLayoutNew]; // Creates a new progrmmatic-AutoLayout ready object
 
 // Update the view after the constraints are set
@@ -61,7 +61,7 @@ MyView *myView = [MyView autoLayoutNew]; // Creates a new progrmmatic-AutoLayout
 #### Swift
 ```swift
 
-// Create an AutoLaoyut view
+// Create an AutoLayout view
 let myView = MyView.autoLayoutNew() // Creates a new progrmmatic-AutoLayout ready object
 
 // Update the view after the constraints are set
