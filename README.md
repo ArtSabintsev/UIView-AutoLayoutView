@@ -1,13 +1,13 @@
 # UIView+AutoLayoutView
 
-### About
+## About
 A small Objective-C category on `UIView` that creates a UIView object that is ready to be used for programmatic AutoLayout. This class is useful for those of us who do a lot of our AutoLayout definitions outside of xibs and storyboards.
 
-### Changelog (v1.0.2)
+## Changelog (v1.0.2)
 - Explicitly imported UIKit
 - Added Swift documentation to README
 
-### Installation Instructions
+## Installation Instructions
 
 ### CocoaPods
 ```
@@ -16,7 +16,7 @@ pod 'UIView-AutoLayoutView'
 ### Manual
 Simply drop the **UIView+AutoLayoutView** folder into your project, and reference `UIView+AutoLayoutView.h` in the classes that need access to the information it provides.
 
-### The Interface
+## The Interface
 
 ``` obj-c
 @interface UIView (AutoLayoutView)
@@ -27,7 +27,7 @@ Simply drop the **UIView+AutoLayoutView** folder into your project, and referenc
 @end
 ```
 
-### The Implementation
+## The Implementation
 ``` obj-c
 + (instancetype)newAutoLayoutView
 {
@@ -46,9 +46,9 @@ Simply drop the **UIView+AutoLayoutView** folder into your project, and referenc
 @end
 ```
 
-### Usage 
+## Setup 
 
-#### Objective-C
+### Objective-C
 ```objc
 
 // Create an AutoLayout view
@@ -58,7 +58,7 @@ MyView *myView = [MyView autoLayoutNew]; // Creates a new progrmmatic-AutoLayout
 [UIView updateLayoutForView:myView];
 ```
 
-#### Swift
+### Swift
 ```swift
 
 // Create an AutoLayout view
@@ -68,5 +68,5 @@ let myView = MyView.autoLayoutNew() // Creates a new progrmmatic-AutoLayout read
 UIView.updateLayoutForView(myView);
 ```
 
-### Created and Maintained by
+## Created and Maintained by
 [Arthur Ariel Sabintsev](http://www.sabintsev.com/) 
